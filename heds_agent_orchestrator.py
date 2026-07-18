@@ -1042,6 +1042,20 @@ if __name__ == "__main__":
         import subprocess
         import webbrowser
         has_opened = False
+        def sync_url_to_github(url):
+            try:
+                import json
+                config_path = os.path.join(BASE_DIR, "tunnel_config.json")
+                with open(config_path, "w") as cf:
+                    json.dump({"api_url": url}, cf)
+                log_event("SYSTEM", f"Syncing tunnel URL to GitHub: {url}")
+                # Add, commit, and push config to GitHub
+                subprocess.run("git add tunnel_config.json", cwd=BASE_DIR, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                subprocess.run('git commit -m "Auto-update tunnel URL"', cwd=BASE_DIR, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                subprocess.run("git push", cwd=BASE_DIR, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                log_event("SYSTEM", "GitHub Pages tunnel URL synced successfully!")
+            except Exception as ge:
+                log_event("SYSTEM", f"GitHub sync failed: {ge}")
         
         # Try localhost.run first (stable, clean DNS, no browser warning pages)
         log_event("SYSTEM", "Starting SSH Reverse Tunnel to localhost.run...")
@@ -1062,6 +1076,7 @@ if __name__ == "__main__":
                         webbrowser.open(qr_url)
                     except Exception:
                         pass
+                    sync_url_to_github(tunnel_url)
         except Exception as e:
             log_event("SYSTEM", f"Localhost.run tunnel failed: {e}")
             
@@ -1085,6 +1100,7 @@ if __name__ == "__main__":
                             webbrowser.open(qr_url)
                         except Exception:
                             pass
+                        sync_url_to_github(tunnel_url)
             except Exception as e:
                 log_event("SYSTEM", f"Serveo tunnel failed: {e}")
 
