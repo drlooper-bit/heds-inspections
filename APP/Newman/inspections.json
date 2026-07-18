@@ -1,0 +1,72 @@
+[
+  {
+    "clientId": "cust-1784318386604",
+    "assetId": "LDR-302",
+    "assetName": "John Deere 744L Loader",
+    "assetSerial": "JD744L3321",
+    "equipmentType": "Wheel Loader",
+    "inspectorName": "Daniel",
+    "inspectionDate": "2026-07-17",
+    "overallStatus": "Fail",
+    "categories": [
+      {
+        "title": "Wheel Loader Systems Checklist",
+        "items": [
+          {
+            "name": "Unit Located & Matches Registry",
+            "status": "Fail",
+            "notes": ""
+          },
+          {
+            "name": "Operational Test (Starts, Runs, Shuttles)",
+            "status": "Monitor",
+            "notes": ""
+          },
+          {
+            "name": "Safety Lights, Alarms & Horn",
+            "status": "Pass",
+            "notes": ""
+          },
+          {
+            "name": "Basic Fluids Levels & Leak Walkaround",
+            "status": "Pass",
+            "notes": ""
+          },
+          {
+            "name": "Cab controls & seatbelt safety",
+            "status": "Pass",
+            "notes": ""
+          },
+          {
+            "name": "Pins, Bushings & Joint Play",
+            "status": "Pass",
+            "notes": ""
+          },
+          {
+            "name": "Undercarriage / Tires Wear & Tread",
+            "status": "Pass",
+            "notes": ""
+          },
+          {
+            "name": "Hydraulic Cylinders & Hoses",
+            "status": "Pass",
+            "notes": ""
+          },
+          {
+            "name": "Structural Attachments & Welds",
+            "status": "Pass",
+            "notes": ""
+          },
+          {
+            "name": "Overall Frame & Body Condition",
+            "status": "Pass",
+            "notes": ""
+          }
+        ]
+      }
+    ],
+    "generalNotes": "",
+    "tier": 2,
+    "id": "insp-1784320133700"
+  }
+]

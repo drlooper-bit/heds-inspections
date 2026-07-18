@@ -1,0 +1,14 @@
+{
+  "systems": {
+    "CDK_Global": {
+      "header_mapping": {
+        "RE_DO_HRS": "re_do_hours",
+        "TECH_RATE": "technician_hourly_rate",
+        "ACTUAL_UNPLANNED_COST": "actual_unplanned_repair_cost",
+        "SCHEDULED_PM_COST": "scheduled_pm_cost",
+        "EQUIPMENT_OEC": "original_equipment_cost",
+        "CRITICAL_FAULTS": "telematics_critical_faults"
+      }
+    }
+  }
+}

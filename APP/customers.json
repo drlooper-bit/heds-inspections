@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Newman",
+    "type": "Dealer",
+    "status": "Active",
+    "progress": 0,
+    "color": "text-amber-500",
+    "nextStep": "Upload Fleet & Schedule Physical Inspection",
+    "id": "cust-1784318386604"
+  },
+  {
+    "name": "Synergy",
+    "type": "Rental",
+    "status": "Active",
+    "progress": 0,
+    "color": "text-amber-500",
+    "nextStep": "Upload Fleet & Schedule Physical Inspection",
+    "id": "cust-1784392040176"
+  }
+]

@@ -1,0 +1,171 @@
+{
+  "updated": "2026-06-28T08:36:07Z",
+  "total_tasks": 8,
+  "completed": 4,
+  "in_progress": 2,
+  "unstarted": 2,
+  "completion_pct": 62,
+  "outline_status": "CHANGED",
+  "outline_meta": "Hash mismatch detected \u00b7 re-baseline required",
+  "tasks": [
+    {
+      "id": "1.1",
+      "name": "KPI Librarian Buildout",
+      "agent": "A1",
+      "status": "COMPLETED",
+      "pct": 100,
+      "deadline": "2026-06-20",
+      "blockers": []
+    },
+    {
+      "id": "1.2",
+      "name": "Data Request Standardization",
+      "agent": "A2",
+      "status": "PENDING",
+      "pct": 0,
+      "deadline": "2026-06-25",
+      "blockers": [
+        "CDK security protocols sign-off",
+        "Client payroll data alignment limits"
+      ]
+    },
+    {
+      "id": "1.3",
+      "name": "DMS Ingestion Mapping",
+      "agent": "A2",
+      "status": "PENDING",
+      "pct": 0,
+      "deadline": "2026-06-25",
+      "blockers": [
+        "ERR-MAP-01: Unmapped Header Property",
+        "Direct DMS database access"
+      ]
+    },
+    {
+      "id": "2.1",
+      "name": "EBITDA Quality Logic",
+      "agent": "A1",
+      "status": "COMPLETED",
+      "pct": 100,
+      "deadline": "2026-06-22",
+      "blockers": []
+    },
+    {
+      "id": "2.2",
+      "name": "DD Risk Register",
+      "agent": "A3",
+      "status": "COMPLETED",
+      "pct": 100,
+      "deadline": "2026-06-22",
+      "blockers": []
+    },
+    {
+      "id": "3.1",
+      "name": "AI Inbound Launch",
+      "agent": "A4/A6",
+      "status": "IN_PROGRESS",
+      "pct": 40,
+      "deadline": "2026-06-25",
+      "blockers": [
+        "OEM telematics webhook configurations (JDLink/Cat Product Link client secrets)",
+        "Ad account credentials & budget sign-off"
+      ]
+    },
+    {
+      "id": "3.2",
+      "name": "Operating Rhythm & Scorecard",
+      "agent": "A1",
+      "status": "COMPLETED",
+      "pct": 100,
+      "deadline": "2026-06-22",
+      "blockers": []
+    },
+    {
+      "id": "3.3",
+      "name": "Business Opportunity Tracking",
+      "agent": "A6",
+      "status": "IN_PROGRESS",
+      "pct": 20,
+      "deadline": "2026-06-28",
+      "blockers": [
+        "Linguistic separation filter (Recruitment vs Revenue leads)"
+      ]
+    }
+  ],
+  "ebitda_metrics": {
+    "fleet_oec": 170000000,
+    "maintenance_cost_variance_pct": 5,
+    "operational_cost_exposure": 8500000,
+    "parts_inventory_value": 3300000,
+    "parts_dead_stock_value": 2500000,
+    "dead_stock_pct": 75.76
+  },
+  "dependency_ledger": [
+    {
+      "owner": "A2 Parts",
+      "item": "CDK Credentials & Security Sign-off",
+      "status": "MISSING",
+      "impact": "Data Request Standardization"
+    },
+    {
+      "owner": "A2 Parts",
+      "item": "DMS access & schema field list",
+      "status": "MISSING",
+      "impact": "DMS Ingestion Mapping"
+    },
+    {
+      "owner": "A4 / A6",
+      "item": "OEM Webhook configurations & keys",
+      "status": "MISSING",
+      "impact": "AI Inbound Launch"
+    },
+    {
+      "owner": "A4 / A6",
+      "item": "Ad account credentials",
+      "status": "MISSING",
+      "impact": "AI Inbound Launch"
+    },
+    {
+      "owner": "A6 Scout",
+      "item": "Recruitment filtering rules",
+      "status": "NEEDED",
+      "impact": "Business Opportunity Tracking"
+    }
+  ],
+  "manual_actions": [
+    {
+      "code": "ERR-MAP-01",
+      "priority": "CRITICAL",
+      "action": "DMS Ingestion header mismatch error inside target schema.",
+      "deadline": "IMMEDIATE"
+    },
+    {
+      "code": "UA-1",
+      "priority": "HIGH",
+      "action": "Review and approve data request template fields.",
+      "deadline": "2026-06-25"
+    },
+    {
+      "code": "UA-2",
+      "priority": "HIGH",
+      "action": "Provide John Deere API/Cat OAuth keys.",
+      "deadline": "2026-06-25"
+    }
+  ],
+  "history": [
+    {
+      "stamp": "2026-06-28 08:00:00",
+      "message": "[SYSTEM] Watchdog initialized. 8 tasks loaded. Completion at 62.5%."
+    },
+    {
+      "stamp": "2026-06-28 08:15:30",
+      "message": "[A5 CYCLE] State refreshed. Blocker ERR-MAP-01 remains active."
+    }
+  ],
+  "metrics": {
+    "wip_exposure": "1,981,508.80",
+    "labor_exposure": "1,129,651.75",
+    "fleet_exposure": "5,004,008.37"
+  },
+  "timestamp": "2026-06-30 11:27:52"
+}

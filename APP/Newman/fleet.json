@@ -1,0 +1,37 @@
+[
+  {
+    "assetId": "EXC-101",
+    "name": "CAT 320 Excavator",
+    "make": "Caterpillar",
+    "model": "320",
+    "type": "Excavator",
+    "serialNumber": "CAT00320E9981",
+    "year": 2021,
+    "hours": 2450,
+    "status": "Not Inspected"
+  },
+  {
+    "assetId": "DOZ-204",
+    "name": "Komatsu D65 Dozer",
+    "make": "Komatsu",
+    "model": "D65PX-18",
+    "type": "Bulldozer",
+    "serialNumber": "KM0D65P1104",
+    "year": 2019,
+    "hours": 4120,
+    "status": "Good",
+    "lastInspected": "2026-05-12"
+  },
+  {
+    "assetId": "LDR-302",
+    "name": "John Deere 744L Loader",
+    "make": "John Deere",
+    "model": "744L",
+    "type": "Wheel Loader",
+    "serialNumber": "JD744L3321",
+    "year": 2022,
+    "hours": 1890,
+    "status": "Critical",
+    "lastInspected": "2026-07-17"
+  }
+]
