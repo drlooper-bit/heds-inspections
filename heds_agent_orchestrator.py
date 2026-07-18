@@ -1067,15 +1067,7 @@ if __name__ == "__main__":
                 if match and not has_opened:
                     has_opened = True
                     tunnel_url = match.group(0)
-                    qr_url = f"https://api.qrserver.com/v1/create-qr-code/?size=400x400&data={tunnel_url}"
-                    log_event("SYSTEM", f"==================================================")
                     log_event("SYSTEM", f"IPHONE ACCESS URL: {tunnel_url}")
-                    log_event("SYSTEM", f"SCAN TO CONNECT: {qr_url}")
-                    log_event("SYSTEM", f"==================================================")
-                    try:
-                        webbrowser.open(qr_url)
-                    except Exception:
-                        pass
                     sync_url_to_github(tunnel_url)
         except Exception as e:
             log_event("SYSTEM", f"Localhost.run tunnel failed: {e}")
@@ -1091,15 +1083,7 @@ if __name__ == "__main__":
                     if match and not has_opened:
                         has_opened = True
                         tunnel_url = match.group(0)
-                        qr_url = f"https://api.qrserver.com/v1/create-qr-code/?size=400x400&data={tunnel_url}"
-                        log_event("SYSTEM", f"==================================================")
                         log_event("SYSTEM", f"IPHONE ACCESS URL: {tunnel_url}")
-                        log_event("SYSTEM", f"SCAN TO CONNECT: {qr_url}")
-                        log_event("SYSTEM", f"==================================================")
-                        try:
-                            webbrowser.open(qr_url)
-                        except Exception:
-                            pass
                         sync_url_to_github(tunnel_url)
             except Exception as e:
                 log_event("SYSTEM", f"Serveo tunnel failed: {e}")
